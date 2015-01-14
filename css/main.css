@@ -60,6 +60,7 @@ html {
     text-decoration: none;
     border-radius: 50%;
     line-height: 8em;
+    transition: all .3s linear;
 }
 
 a:hover {
@@ -89,11 +90,11 @@ a:hover {
     transition: all 6s linear;
 }
 
-.clock-face:hover  .hand-hour {
+.clock-face:target .hand-hour {
     transform: rotate(360deg);
 }
 
-.clock-face:hover  .hand-minute {
+.clock-face:target  .hand-minute {
     transform: rotate(4320deg);
 }
 
