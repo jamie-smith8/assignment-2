@@ -5,32 +5,111 @@
 @viewport { width: device-width; scale: 1; }
 
 html {
-  box-sizing: border-box;
+      box-sizing: border-box;
 
-  -moz-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
+      -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
 
-  background-color: #000;
+      background-color: black;
 
-  font: normal 100%/1.5 sans-serif;
-  color: #fff;
+      font: normal 100%/1.5 sans-serif;
+      color: #fff;
 }
 
 *, *::before, *::after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 .clock-face {
-  height: 300px;
-  width: 300px;
+    background-image: url("../images/clock-face.svg");
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
+    position: relative;
 }
 
 .hand {
-  width: 14px;
+    width: 14px;
+    position: absolute;
+    bottom: calc(50% - 7px);
+    left: calc(50% - 7px);
+    transform-origin: center bottom; 
 }
 
 .center {
-  width: 28px;
+    width: 28px;
+    position: absolute;
+    bottom: calc(50% - 14px);
+    left: calc(50% - 14px);
 }
+
+.hand-hour {
+    position: absolute;
+}
+
+.hand-minute {
+    position: absolute;
+}
+
+.button {
+    color: white;
+    margin: 1em;
+    width: 8em;
+    text-decoration: none;
+    border-radius: 50%;
+    line-height: 8em;
+}
+
+a:hover {
+    color: black;
+    background-color: white;
+}
+
+.button-forward {
+    background-color: green;
+    display: inline-block;
+}
+
+.button-backwards {
+    background-color: red;
+    display: inline-block;
+}
+
+.main {
+    text-align: center;   
+}
+
+.hand-minute {
+    transition: all 6s linear;
+}
+
+.hand-hour {
+    transition: all 6s linear;
+}
+
+.clock-face:hover  .hand-hour {
+    transform: rotate(360deg);
+}
+
+.clock-face:hover  .hand-minute {
+    transform: rotate(4320deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
